@@ -1,0 +1,88 @@
+/* Reset básico para garantir que o layout apareça de forma consistente */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configurações gerais do body */
+body {
+    font-family: 'Chakra Petch', sans-serif;
+    background-color: #f0f0f0; /* Cor de fundo clara */
+    color: #333; /* Cor do texto */
+}
+
+/* Estilização do header */
+header {
+    background-color: #000; /* Fundo preto */
+    color: #fff; /* Texto branco */
+    padding: 1rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+/* Estilização da seção chamada */
+.chamada {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Brave_%28film%29_poster.jpg/800px-Brave_%28film%29_poster.jpg') no-repeat center center/cover; /* Imagem de fundo temática */
+    background-color: #d17d3f; /* Cor de fundo de reserva, se a imagem não carregar */
+}
+
+.chamada-texto {
+    max-width: 50%;
+    color: #fff;
+}
+
+.chamada-texto h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.chamada-texto p {
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
+/* Estilização do iframe do vídeo */
+.chamada iframe {
+    border: none;
+    border-radius: 8px; /* Bordas arredondadas */
+}
+
+/* Estilização da seção categoria */
+.categoria {
+    padding: 2rem;
+    background-color: #ffebc2; /* Fundo amarelo claro para a seção */
+    overflow: hidden; /* Garante que o container não expanda com o overflow dos vídeos */
+}
+
+.categoria h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #ff6f00; /* Laranja vibrante para o título */
+    text-align: left; /* Alinhamento do título à esquerda */
+}
+
+/* Container dos vídeos com rolagem lateral */
+.categoria-videos {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: nowrap; /* Evita que os vídeos quebrem para a linha seguinte */
+    overflow-x: auto; /* Habilita rolagem horizontal */
+    padding: 1rem 0; /* Espaço adicional acima e abaixo para o rolar */
+}
+
+.categoria-videos a {
+    display: block;
+    flex: 0 0 auto; /* Garante que os itens não se estiquem e não quebrem */
+    width: 360px; /* Aumenta a largura dos vídeos */
+}
+
+.categoria-videos img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada para um efeito chamativo */
+}
